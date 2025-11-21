@@ -51,13 +51,19 @@
 <script>
   function login() {
     const pw = document.getElementById("pw").value;
+
+    // Change this to the password you want
     const correct = "alex123";
+
     if (pw === correct) {
+      // remember in this browser that we’re allowed in
+      localStorage.setItem("alexHubAuthed", "true");
       window.location.href = "index.html";
     } else {
       alert("Incorrect password");
     }
   }
 </script>
+  
 </body>
 </html>
