@@ -15,9 +15,7 @@
       --text-subtle: #64748b;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -74,6 +72,7 @@
       font-size: 0.98rem;
       font-weight: 500;
       box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+      cursor: pointer;
     }
 
     .card-icon {
@@ -144,6 +143,21 @@
       transform: translateY(1px);
     }
 
+    .drive-link-row {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .drive-link-row a {
+      font-size: 0.85rem;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .drive-link-row a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 420px) {
       .app {
         padding: 20px 16px 22px;
@@ -151,70 +165,3 @@
 
       .header h1 {
         font-size: 1.35rem;
-      }
-
-      .card {
-        padding: 12px 13px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="app">
-    <div class="header">
-      <h1>Alex's Family Resource Hub</h1>
-      <p>Quick access to medical history, action plans, and support resources</p>
-    </div>
-
-    <div class="cards">
-      <div class="card login">
-        <div class="card-icon">🔑</div>
-        <div>Find Login Information</div>
-      </div>
-
-      <div class="card meeting">
-        <div class="card-icon">👥</div>
-        <div>Last Family Meeting Notes</div>
-      </div>
-
-      <div class="card therapy">
-        <div class="card-icon">❤️</div>
-        <div>Access Therapy Resources</div>
-      </div>
-
-      <div class="card action">
-        <div class="card-icon">📋</div>
-        <div>Family Action Plan</div>
-      </div>
-    </div>
-
-    <div class="search-card">
-      <div class="search-label">
-        <span class="icon">🔍</span>
-        <span>I'm looking for...</span>
-      </div>
-      <div class="search-row">
-        <input
-          id="searchInput"
-          type="text"
-          placeholder="Type anything you need to find"
-        />
-        <button type="button" onclick="handleSearch()">Search</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Only allow viewing if logged in
-    if (!localStorage.getItem("alexHubAuthed")) {
-      window.location.href = "auth.html";
-    }
-
-    function handleSearch() {
-      const value = document.getElementById("searchInput").value.trim();
-      if (!value) return;
-      alert("Search isn’t wired up yet, but you typed: " + value);
-    }
-  </script>
-</body>
-</html>
