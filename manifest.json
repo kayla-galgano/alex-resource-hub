@@ -1,0 +1,21 @@
+{
+  "name": "Alex's Family Resource Hub",
+  "short_name": "Alex's Hub",
+  "description": "Family resource center for medical history and support",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EFF6FF",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
